@@ -1,0 +1,285 @@
+:root {
+  color: #24302f;
+  background: #f7f4f0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.masthead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 24px;
+  padding: 34px;
+  color: #fff;
+  background:
+    linear-gradient(120deg, rgba(31, 83, 76, 0.92), rgba(117, 53, 70, 0.86)),
+    url("https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1600&q=80");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.eyebrow,
+.card-label {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 12px;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 0.98;
+}
+
+.lede {
+  max-width: 620px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.panel,
+.prediction-card {
+  border: 1px solid #e4ded5;
+  border-radius: 8px;
+  background: #fffdfa;
+  box-shadow: 0 16px 36px rgba(51, 37, 28, 0.08);
+}
+
+.prediction-card {
+  padding: 24px;
+  color: #24302f;
+  background: rgba(255, 253, 250, 0.96);
+}
+
+.prediction-card h2 {
+  margin-bottom: 18px;
+  color: #8a2f4b;
+  font-size: 2.3rem;
+}
+
+.prediction-card dl {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.prediction-card div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+dt {
+  color: #6c7772;
+}
+
+dd {
+  margin: 0;
+  font-weight: 800;
+  text-align: right;
+}
+
+.basis {
+  margin: 18px 0 0;
+  color: #66716d;
+  font-size: 0.92rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  gap: 24px;
+}
+
+.panel {
+  padding: 24px;
+}
+
+.section-title,
+.section-title span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.split {
+  justify-content: space-between;
+}
+
+.form-panel {
+  display: grid;
+  gap: 16px;
+  align-self: start;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #4a5551;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #d8d0c6;
+  border-radius: 6px;
+  padding: 11px 12px;
+  color: #24302f;
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: #fff;
+  background: #1f534c;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.message {
+  margin: 0;
+  color: #8a2f4b;
+  font-weight: 700;
+}
+
+.latest {
+  margin-bottom: 16px;
+  color: #66716d;
+}
+
+.log-list {
+  display: grid;
+  gap: 12px;
+}
+
+.log-item {
+  display: grid;
+  gap: 8px;
+  border: 1px solid #eee7df;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+}
+
+.log-item div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.log-item span,
+.log-item p {
+  color: #68736f;
+}
+
+.log-item p {
+  margin-bottom: 0;
+}
+
+.flow {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: #8a2f4b;
+  background: #f8e8ed;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+@media (max-width: 860px) {
+  .masthead,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .masthead {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .app {
+    width: min(100% - 20px, 1180px);
+    padding: 16px 0;
+  }
+
+  .panel,
+  .prediction-card {
+    padding: 18px;
+  }
+
+  .log-item div:first-child,
+  .prediction-card div {
+    display: grid;
+    gap: 4px;
+  }
+
+  dd {
+    text-align: left;
+  }
+}
